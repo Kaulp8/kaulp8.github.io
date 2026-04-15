@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strike Mission Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .app-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #2980b9;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="app.html">Strike Calculator</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="app-container">
+    <h2>Strike Mission Budget Tool</h2>
+    <p>Enter your costs to see if this trip is a "Go"!</p>
+    
+    <label>Flight Cost ($):</label>
+    <input type="number" id="flight" placeholder="e.g. 450">
+    
+    <label>Board Bag Fee ($):</label>
+    <input type="number" id="bags" placeholder="e.g. 50">
+    
+    <button onclick="calculateTotal()">Check Budget</button>
+    
+    <h3 id="result"></h3>
+</div>
+
+<script>
+    function calculateTotal() {
+        var flight = parseFloat(document.getElementById('flight').value) || 0;
+        var bags = parseFloat(document.getElementById('bags').value) || 0;
+        var total = flight + bags;
+        var resultText = "Total: $" + total;
+        
+        if (total <= 500) {
+            document.getElementById('result').innerHTML = resultText + " - STRIKE MISSION GO! 🏄‍♂️";
+            document.getElementById('result').style.color = "green";
+        } else {
+            document.getElementById('result').innerHTML = resultText + " - Over budget. Keep hunting.";
+            document.getElementById('result').style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

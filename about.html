@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Kaul</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strike Mission Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .app-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #2980b9;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="app.html">Strike Calculator</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="app-container">
+    <h2>Strike Mission Budget Tool</h2>
+    <p>Enter your costs to see if this trip is a "Go"!</p>
+    
+    <label>Flight Cost ($):</label>
+    <input type="number" id="flight" placeholder="e.g. 450">
+    
+    <label>Board Bag Fee ($):</label>
+    <input type="number" id="bags" placeholder="e.g. 50">
+    
+    <button onclick="calculateTotal()">Check Budget</button>
+    
+    <h3 id="result"></h3>
+</div>
+
+<script>
+    function calculateTotal() {
+        var flight = parseFloat(document.getElementById('flight').value) || 0;
+        var bags = parseFloat(document.getElementById('bags').value) || 0;
+        var total = flight + bags;
+        var resultText = "Total: $" + total;
+        
+        if (total <= 500) {
+            document.getElementById('result').innerHTML = resultText + " - STRIKE MISSION GO! 🏄‍♂️";
+            document.getElementById('result').style.color = "green";
+        } else {
+            document.getElementById('result').innerHTML = resultText + " - Over budget. Keep hunting.";
+            document.getElementById('result').style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+    <div class="profile-container">
+        <h1>About Me</h1>
+        <p>I am a student currently attending Saddleback College with plans to transfer to Brigham Young University. I am highly passionate about business and currently run an e-commerce venture called <span class="highlight">Kaul's List</span>. Outside of academics and business, I work as a P.E. Instructor and spend a lot of time under the hood of my Toyota Land Cruisers.</p>
+
+        <hr>
+
+        <div class="interests-layout">
+            
+            <div class="food-section">
+                <h2>My Favorite Foods</h2>
+                <p>When I am grabbing takeout locally in Laguna Beach or after a surf session, these are my top picks:</p>
+                <table border="1" class="styled-table">
+                    <tr>
+                        <th>Food</th>
+                        <th>Rating</th>
+                        <th>Notes</th>
+                    </tr>
+                    <tr>
+                        <td>Tacos</td>
+                        <td>10/10</td>
+                        <td>Strictly no onions or pico de gallo!</td>
+                    </tr>
+                    <tr>
+                        <td>Ahi Tuna</td>
+                        <td>10/10</td>
+                        <td>Perfect post-surf meal.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="travel-section">
+                <h2>Favorite Places</h2>
+                <p>Whether chasing a swell or just traveling, these spots top the list:</p>
+                <ul>
+                    <li><strong>Hawaii</strong> (Specifically the outer reefs in Kauai)</li>
+                    <li><strong>California</strong> (Home base)</li>
+                    <li><strong>Costa Rica</strong> (Liberia strikes)</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

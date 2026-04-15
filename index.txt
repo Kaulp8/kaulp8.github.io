@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kaul's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strike Mission Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .app-container {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #2980b9;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="app.html">Strike Calculator</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<div class="app-container">
+    <h2>Strike Mission Budget Tool</h2>
+    <p>Enter your costs to see if this trip is a "Go"!</p>
+    
+    <label>Flight Cost ($):</label>
+    <input type="number" id="flight" placeholder="e.g. 450">
+    
+    <label>Board Bag Fee ($):</label>
+    <input type="number" id="bags" placeholder="e.g. 50">
+    
+    <button onclick="calculateTotal()">Check Budget</button>
+    
+    <h3 id="result"></h3>
+</div>
+
+<script>
+    function calculateTotal() {
+        var flight = parseFloat(document.getElementById('flight').value) || 0;
+        var bags = parseFloat(document.getElementById('bags').value) || 0;
+        var total = flight + bags;
+        var resultText = "Total: $" + total;
+        
+        if (total <= 500) {
+            document.getElementById('result').innerHTML = resultText + " - STRIKE MISSION GO! 🏄‍♂️";
+            document.getElementById('result').style.color = "green";
+        } else {
+            document.getElementById('result').innerHTML = resultText + " - Over budget. Keep hunting.";
+            document.getElementById('result').style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+    <div class="main-content">
+        <h1>Welcome to My Website</h1>
+        <p>My name is Kaul. I am a student interested in e-commerce, tracking swell data for strike missions, and mechanical restorations.</p>
+
+        <img src="https://via.placeholder.com/300x200?text=Surf+or+Truck+Photo" alt="Placeholder for a surf or Land Cruiser photo">
+        
+        <hr>
+
+        <h2>Current Projects & Passions</h2>
+        
+        <ol>
+            <li><strong>Business & Education</strong>
+                <ul>
+                    <li>Scaling Kaul's List</li>
+                    <li>Completing university coursework</li>
+                </ul>
+            </li>
+            <li><strong>Surf Strike Missions</strong>
+                <ul>
+                    <li>Monitoring real-time swell data and period forecasts</li>
+                    <li>Targeting the best windows in Morocco and the Caribbean (flights under $500)</li>
+                    <li>Packing the Matuse wetsuits</li>
+                </ul>
+            </li>
+            <li><strong>Vehicle Restoration</strong>
+                <ul>
+                    <li>Routine service on the 1976 FJ40 and 1973 FJ43</li>
+                    <li>Overhauling the exhaust system and manifold on the Discovery II</li>
+                </ul>
+            </li>
+        </ol>
+
+        <hr>
+
+        <h2>Media Gallery</h2>
+        <p>Here is a recent look at some mechanical work:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/8-W7W3g1848" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="box" id="tableau-section">
+        <h2>Data Analytics</h2>
+        <p>Below is a live interactive Tableau dashboard.</p>
+        
+        <div class='tableauPlaceholder' id='viz1234567890' style='position: relative'>
+            <p><em>[Paste your Tableau Public embed code here]</em></p>
+        </div>
+    </div>
+
+</body>
+</html>
