@@ -1,0 +1,82 @@
+/* 1. Custom Background, Font Family, and Font Color */
+body {
+    background-color: #f4f6f7; /* Custom background color */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Font family */
+    color: #2c3e50; /* Font color */
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. Styling the Navigation Div */
+.nav {
+    background-color: #2980b9;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* 3. Styling the Content Divs */
+.main-content, .profile-container, .box {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #d35400;
+    font-weight: bold;
+}
+
+/* --- CHAPTER 25: POSITIONING REQUIREMENTS --- */
+
+/* The Relative Box acts as the "anchor" or "parent" */
+.relative-box {
+    position: relative; 
+    width: 400px;
+    height: 200px;
+    background-color: #ecf0f1;
+    border: 2px solid #bdc3c7;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* The Absolute Box is positioned completely based on the walls of the Relative Box */
+.absolute-box {
+    position: absolute; 
+    top: 20px;   /* Pinned 20px from the top of the grey relative box */
+    right: 20px; /* Pinned 20px from the right of the grey relative box */
+    width: 120px;
+    height: 50px;
+    background-color: #e74c3c;
+    color: white;
+    text-align: center;
+    line-height: 50px; /* Centers the text vertically */
+    border-radius: 4px;
+}
+
+/* The Fixed Box stays pinned to the screen even if you scroll down */
+.fixed-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #27ae60;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
