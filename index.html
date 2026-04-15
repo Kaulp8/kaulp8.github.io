@@ -6,16 +6,18 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .app-container {
-            max-width: 400px;
+            max-width: 500px;
             margin: 20px auto;
             padding: 20px;
             border: 2px solid #2980b9;
             border-radius: 10px;
             background-color: #fff;
             text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        input { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
-        button { width: 100%; padding: 10px; background-color: #27ae60; color: white; border: none; cursor: pointer; }
+        input { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { width: 85%; padding: 10px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        #result { margin-top: 15px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -33,13 +35,13 @@
     
     <div class="app-container">
         <h2>Strike Mission Budget Tool</h2>
-        <p>Enter your costs to see if this trip is a "Go"!</p>
-        <label>Flight Cost ($):</label>
-        <input type="number" id="flight" placeholder="e.g. 450">
-        <label>Board Bag Fee ($):</label>
-        <input type="number" id="bags" placeholder="e.g. 50">
-        <button onclick="calculateTotal()">Check Budget</button>
-        <h3 id="result"></h3>
+        <p>Will this trip stay under the $500 limit?</p>
+        <label>Flight Cost ($):</label><br>
+        <input type="number" id="flight" placeholder="e.g. 450"><br>
+        <label>Board Bag Fees ($):</label><br>
+        <input type="number" id="bags" placeholder="e.g. 50"><br>
+        <button onclick="checkBudget()">Analyze Strike Mission</button>
+        <p id="result"></p>
     </div>
 
     <hr>
@@ -49,13 +51,19 @@
         <li><strong>Business & Education</strong>
             <ul>
                 <li>Scaling Kaul's List</li>
-                <li>Completing university coursework</li>
+                <li>Completing university coursework at Saddleback and BYU</li>
             </ul>
         </li>
         <li><strong>Surf Strike Missions</strong>
             <ul>
                 <li>Monitoring real-time swell data and period forecasts</li>
-                <li>Targeting the best windows in Morocco and the Caribbean</li>
+                <li>Targeting windows in Morocco, the Caribbean, and Costa Rica</li>
+            </ul>
+        </li>
+        <li><strong>Vehicle Restoration</strong>
+            <ul>
+                <li>Mechanical repairs on 1976 FJ40 and 1973 FJ43 Land Cruisers</li>
+                <li>Exhaust overhaul on the 2003 Land Rover Discovery II</li>
             </ul>
         </li>
     </ol>
@@ -70,23 +78,55 @@
     <h2>Data Analytics</h2>
     <p>Below is my live interactive Tableau dashboard tracking Costa Rica swell frequency.</p>
     
-    <div class='tableauPlaceholder' id='viz1776280752185' style='position: relative'><noscript><a href='#'><img alt='Sheet 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CostaSouthSwell&#47;Sheet1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='CostaSouthSwell&#47;Sheet1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CostaSouthSwell&#47;Sheet1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1776280752185');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    <div class='tableauPlaceholder' id='viz1776280752185' style='position: relative'>
+        <noscript>
+            <a href='#'><img alt='Sheet 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CostaSouthSwell&#47;Sheet1&#47;1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> 
+            <param name='site_root' value='' />
+            <param name='name' value='CostaSouthSwell&#47;Sheet1' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Co&#47;CostaSouthSwell&#47;Sheet1&#47;1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+        </object>
+    </div>                
+    <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1776280752185');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        vizElement.style.width='100%';
+        vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    </script>
 </div>
 
 <script>
-    function calculateTotal() {
-        var flight = parseFloat(document.getElementById('flight').value) || 0;
-        var bags = parseFloat(document.getElementById('bags').value) || 0;
-        var total = flight + bags;
-        var resultText = "Total: $" + total;
-        if (total <= 500) {
-            document.getElementById('result').innerHTML = resultText + " - STRIKE MISSION GO! 🏄‍♂️";
-            document.getElementById('result').style.color = "green";
+    function checkBudget() {
+        const flight = parseFloat(document.getElementById('flight').value) || 0;
+        const bags = parseFloat(document.getElementById('bags').value) || 0;
+        const total = flight + bags;
+        const resultElement = document.getElementById('result');
+        if (total === 0) {
+            resultElement.innerText = "Please enter some costs!";
+            resultElement.style.color = "#333";
+        } else if (total <= 500) {
+            resultElement.innerText = "Total: $" + total + " - STRIKE MISSION IS A GO! 🏄‍♂️";
+            resultElement.style.color = "#27ae60";
         } else {
-            document.getElementById('result').innerHTML = resultText + " - Over budget.";
-            document.getElementById('result').style.color = "red";
+            resultElement.innerText = "Total: $" + total + " - Over budget.";
+            resultElement.style.color = "#e74c3c";
         }
     }
 </script>
 
 </body>
+</html>
