@@ -4,21 +4,6 @@
     <meta charset="UTF-8">
     <title>Kaul's Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        .app-container {
-            max-width: 500px;
-            margin: 20px auto;
-            padding: 20px;
-            border: 2px solid #2980b9;
-            border-radius: 10px;
-            background-color: #fff;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        input { width: 80%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
-        button { width: 85%; padding: 10px; background-color: #27ae60; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
-        #result { margin-top: 15px; font-weight: bold; }
-    </style>
 </head>
 <body>
 
@@ -33,17 +18,6 @@
     <h1>Welcome to My Website</h1>
     <p>My name is Kaul. I am a student interested in e-commerce, tracking swell data for strike missions, and mechanical restorations.</p>
     
-    <div class="app-container">
-        <h2>Strike Mission Budget Tool</h2>
-        <p>Will this trip stay under the $500 limit?</p>
-        <label>Flight Cost ($):</label><br>
-        <input type="number" id="flight" placeholder="e.g. 450"><br>
-        <label>Board Bag Fees ($):</label><br>
-        <input type="number" id="bags" placeholder="e.g. 50"><br>
-        <button onclick="checkBudget()">Analyze Strike Mission</button>
-        <p id="result"></p>
-    </div>
-
     <hr>
     
     <h2>Current Projects & Passions</h2>
@@ -109,24 +83,8 @@
     </script>
 </div>
 
-<script>
-    function checkBudget() {
-        const flight = parseFloat(document.getElementById('flight').value) || 0;
-        const bags = parseFloat(document.getElementById('bags').value) || 0;
-        const total = flight + bags;
-        const resultElement = document.getElementById('result');
-        if (total === 0) {
-            resultElement.innerText = "Please enter some costs!";
-            resultElement.style.color = "#333";
-        } else if (total <= 500) {
-            resultElement.innerText = "Total: $" + total + " - STRIKE MISSION IS A GO! 🏄‍♂️";
-            resultElement.style.color = "#27ae60";
-        } else {
-            resultElement.innerText = "Total: $" + total + " - Over budget.";
-            resultElement.style.color = "#e74c3c";
-        }
-    }
-</script>
+</body>
+</html>
 
 </body>
 </html>
