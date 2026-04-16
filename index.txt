@@ -1,0 +1,39 @@
+Start Bootstrap Menu
+	•	About
+	•	Projects
+	•	Contact
+Grayscale
+A free, responsive, one page Bootstrap theme created by Start Bootstrap.
+Get Started
+Built with Bootstrap 5
+Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on the preview page. The theme is open source, and you can use it for any purpose, personal or commercial.
+
+
+Shoreline
+Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!
+
+Misty
+An example of where you can put an image of a project, or anything else, along with a description.
+
+Mountains
+Another example of a project with its respective description. These sections work well responsively as well!
+Subscribe to receive updates!
+
+Notify Me!
+An email is required.
+Email is not valid.
+Form submission successful!
+To activate this form, sign up at 
+https://startbootstrap.com/solution/contact-forms
+Error sending message!
+Address
+
+4923 Market Street, Orlando FL
+Email
+
+hello@yourdomain.com
+Phone
+
++1 (555) 902-8832
+
+Copyright © Your Website 2023
