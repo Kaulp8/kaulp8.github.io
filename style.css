@@ -36,10 +36,13 @@ body {
     color: #3b82f6;
 }
 
-/* 2. Colored Hero Banner */
+/* 2. Hero Banner with Background Image */
 .hero-banner {
-    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); /* Deep Ocean Blue */
-    padding: 80px 20px 100px 20px;
+    /* The linear-gradient adds a dark tint so your white text is easy to read over the photo */
+    background-image: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px 120px 20px;
     text-align: center;
 }
 
