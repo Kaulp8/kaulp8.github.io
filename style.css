@@ -1,82 +1,98 @@
-/* 1. Custom Background, Font Family, and Font Color */
+/* Import a premium modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
 body {
-    background-color: #f4f6f7; /* Custom background color */
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Font family */
-    color: #2c3e50; /* Font color */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8fafc; /* Clean, modern off-white */
+    color: #1e293b; /* Deep slate for readability */
+    line-height: 1.7;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 
-/* 2. Styling the Navigation Div */
+/* 1. Sleek Floating Navigation */
 .nav {
-    background-color: #2980b9;
-    padding: 15px;
+    background-color: #ffffff;
+    padding: 20px;
     text-align: center;
-    border-radius: 5px;
-    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav a {
-    color: white;
-    margin: 0 15px;
+    color: #64748b;
+    margin: 0 20px;
     text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav a:hover {
-    text-decoration: underline;
+    color: #3b82f6; /* Modern Electric Blue */
 }
 
-/* 3. Styling the Content Divs */
-.main-content, .profile-container, .box {
+/* 2. Modern Container Styling */
+.main-content, .box {
+    max-width: 900px;
+    margin: 40px auto;
     background-color: white;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    margin-bottom: 20px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-.highlight {
-    color: #d35400;
-    font-weight: bold;
+/* 3. Typography Upgrades */
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.025em;
+    margin-bottom: 10px;
 }
 
-/* --- CHAPTER 25: POSITIONING REQUIREMENTS --- */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 30px;
+    border-left: 4px solid #3b82f6;
+    padding-left: 15px;
+}
 
-/* The Relative Box acts as the "anchor" or "parent" */
-.relative-box {
-    position: relative; 
-    width: 400px;
-    height: 200px;
-    background-color: #ecf0f1;
-    border: 2px solid #bdc3c7;
-    padding: 15px;
+/* 4. Media & Dashboard Polish */
+iframe {
+    border-radius: 12px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 40px 0;
+}
+
+/* 5. Modern Table Styling (for your food ratings) */
+table {
+    width: 100%;
+    border-collapse: collapse;
     margin-top: 20px;
 }
 
-/* The Absolute Box is positioned completely based on the walls of the Relative Box */
-.absolute-box {
-    position: absolute; 
-    top: 20px;   /* Pinned 20px from the top of the grey relative box */
-    right: 20px; /* Pinned 20px from the right of the grey relative box */
-    width: 120px;
-    height: 50px;
-    background-color: #e74c3c;
-    color: white;
-    text-align: center;
-    line-height: 50px; /* Centers the text vertically */
-    border-radius: 4px;
+th {
+    text-align: left;
+    padding: 12px;
+    background-color: #f1f5f9;
+    font-weight: 600;
 }
 
-/* The Fixed Box stays pinned to the screen even if you scroll down */
-.fixed-box {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #27ae60;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+td {
+    padding: 12px;
+    border-bottom: 1px solid #e2e8f0;
 }
